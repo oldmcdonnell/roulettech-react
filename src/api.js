@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const baseUrl = "http://127.0.0.1:8000";
+// Use the VITE_BASE_URL environment variable for the base URL
+const baseUrl = import.meta.env.VITE_BASE_URL;
 
 export const getToken = async ({ dispatch, username, password }) => {
   try {
